@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sistem Informasi Desa Bluto</title>
-
 <style>
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -536,7 +535,7 @@ h3 { margin: 0 0 8px; color: var(--dark); }
     });
 
     // Tutup menu saat salah satu link diklik
-    links.querySelectorAll('a').forEgach(a => {
+    links.querySelectorAll('a').forEach(a => {
         a.addEventListener('click', () => {
             toggle.classList.remove('open');
             links.classList.remove('open');

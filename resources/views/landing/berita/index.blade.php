@@ -59,11 +59,13 @@
 
         /* ===== HERO ===== */
         .hero-news {
+            background-image: url('/images/balai/desa.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+
+            /* opsional tapi penting */
             position: relative;
-            background: linear-gradient(145deg, var(--primary-deeper) 0%, var(--primary-dark) 45%, var(--primary) 75%, #7c3aed 100%);
-            padding: 88px 24px 80px;
-            text-align: center;
-            overflow: hidden;
         }
 
         .hero-news::before {
@@ -741,48 +743,73 @@
         }
 
         /* ===== PAGINATION ===== */
-        .pagination-wrap {
-            margin-top: 44px;
+        /* =========================
+       PAGINATION FIX FINAL
+    ========================= */
+
+        /* reset list */
+        .pagination {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
             display: flex;
             justify-content: center;
+            gap: 10px;
         }
 
-        /* Override Bootstrap pagination with our style */
-        .pagination-wrap .pagination {
-            gap: 6px;
-            flex-wrap: wrap;
+        /* tombol umum */
+        .pagination .page-link {
+            display: flex;
+            align-items: center;
             justify-content: center;
+
+            min-width: 42px;
+            height: 42px;
+
+            background: white !important;
+            color: #374151 !important;
+
+            border: 1px solid #e5e7eb !important;
+            border-radius: 10px !important;
+
+            font-size: 0.85rem;
+            font-weight: 600;
+
+            transition: all 0.2s ease;
         }
 
-        .pagination-wrap .page-item .page-link {
-            border: 1px solid var(--primary-border);
-            color: var(--text);
-            border-radius: 8px !important;
-            font-size: 0.88rem;
-            font-weight: 500;
-            padding: 8px 14px;
-            min-width: 40px;
-            text-align: center;
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            transition: all .2s;
-            background: white;
+        /* hover */
+        .pagination .page-link:hover {
+            background: #eef2ff !important;
+            color: #6366f1 !important;
+            border-color: #c7d2fe !important;
         }
 
-        .pagination-wrap .page-item.active .page-link {
-            background: var(--primary);
-            border-color: var(--primary);
-            color: white;
+        /* active (INI YANG PALING PENTING) */
+        .pagination .page-item.active .page-link {
+            background: linear-gradient(135deg, #6366f1, #8b5cf6) !important;
+            color: white !important;
+            border: none !important;
+            box-shadow: 0 6px 18px rgba(99, 102, 241, 0.35);
         }
 
-        .pagination-wrap .page-item:not(.active) .page-link:hover {
-            background: var(--primary-pale);
-            border-color: var(--primary-light);
-            color: var(--primary);
-        }
-
-        .pagination-wrap .page-item.disabled .page-link {
-            opacity: 0.45;
+        /* disabled */
+        .pagination .page-item.disabled .page-link {
+            opacity: 0.4;
             pointer-events: none;
+        }
+
+        /* hapus tulisan "Showing..." */
+        nav p {
+            display: none;
+        }
+
+        /* wrapper biar rapi */
+        .pagination-wrap {
+            margin-top: 40px;
+            display: flex;
+            justify-content: center;
         }
 
         /* ===== RESPONSIVE ===== */
@@ -846,7 +873,7 @@
         <div class="hero-orb hero-orb-a"></div>
         <div class="hero-orb hero-orb-b"></div>
         <div class="hero-news-inner">
-            <h1>Berita <span>Desa</span></h1>
+            <h1>Berita Desa</h1>
             <p>Informasi terbaru seputar kegiatan, pengumuman, dan program Desa Bluto</p>
         </div>
     </section>
@@ -899,9 +926,7 @@
                     <a href="{{ route('public.berita.show', $main->slug) }}" class="card-featured-main">
 
                         <div class="feat-bg"
-                            style="
-                background-image: url('{{ $main->image ? asset('storage/' . $main->image) : 'https://via.placeholder.com/800x600' }}');
-            ">
+                            style="background-image: url('{{ $main->image ? asset('storage/' . $main->image) : asset('images/default.jpg') }}');">
                         </div>
 
                         <div class="feat-overlay"></div>
