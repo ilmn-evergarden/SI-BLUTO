@@ -853,10 +853,29 @@
 
 
     {{-- ================= SEARCH ================= --}}
-    <div class="search-wrap">
-        <form method="GET" action="{{ route('public.berita.index') }}" class="search-bar">
-            <input type="text" name="search" Cari berita..." value="{{ request('search') }}">
-            <button type="submit">Cari Berita</button>
+    <div
+        style="background: white; padding: 36px 24px 28px; display: flex; flex-direction: column; align-items: center; gap: 16px;">
+
+        <form method="GET" action="{{ route('public.berita.index') }}"
+            style="display: flex; flex-direction: column; align-items: center; gap: 14px; width: 100%; max-width: 580px;">
+
+            {{-- Input pill --}}
+            <div style="position: relative; width: 100%;">
+                <div style="display: flex; align-items: center; border: 1px solid #dfe1e5; border-radius: 24px; padding: 11px 20px; gap: 12px; background: white; transition: box-shadow .2s, border-color .2s;"
+                    onfocusin="this.style.boxShadow='0 2px 10px rgba(0,0,0,0.12)'; this.style.borderColor='transparent';"
+                    onfocusout="this.style.boxShadow='none'; this.style.borderColor='#dfe1e5';">
+
+                    {{-- Search icon --}}
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#9aa0a6" stroke-width="2"
+                        style="flex-shrink:0;">
+                        <circle cx="11" cy="11" r="8" />
+                        <path d="m21 21-4.35-4.35" />
+                    </svg>
+
+                    <input type="text" name="search" value="{{ request('search') }}" placeholder="Cari berita desa..."
+                        style="flex: 1; border: none; background: transparent; font-size: 15px; color: #202124; outline: none; font-family: 'DM Sans', sans-serif; min-width: 0;">
+                </div>
+            </div>
         </form>
     </div>
 
