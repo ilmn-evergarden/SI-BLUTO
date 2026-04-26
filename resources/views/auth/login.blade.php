@@ -327,14 +327,6 @@
 <!-- RIGHT PANEL -->
 <div class="right-panel">
 
-    {{-- Tombol Kembali --}}
-    <a href="{{ url()->previous() }}" class="btn-back">
-        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
-            <path d="M15 18l-6-6 6-6"/>
-        </svg>
-        Kembali
-    </a>
-
     <div class="form-header">
         <p class="welcome">Selamat Datang</p>
         <h2>Masuk ke Akun Anda</h2>

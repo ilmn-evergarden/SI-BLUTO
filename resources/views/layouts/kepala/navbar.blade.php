@@ -1,7 +1,7 @@
 <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
       <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-        <a class="navbar-brand brand-logo mr-5" href="index.html"><img src="{{ asset('images/logo.png') }}" class="mr-2" alt="logo" style="height:50px; width:auto;"/></a>
-        <a class="navbar-brand brand-logo-mini" href="index.html"><img src="{{ asset('images/logo-mini.png') }}"/></a>
+        <a class="navbar-brand brand-logo mr-5" href="{{ route('kepala.dashboard') }}"><img src="{{ asset('images/logo.png') }}" class="mr-2" alt="logo" style="height:50px; width:auto;"/></a>
+        <a class="navbar-brand brand-logo-mini" href="{{ route('kepala.dashboard') }}"><img src="{{ asset('images/logo-mini.png') }}"/></a>
       </div>
       <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
         <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
@@ -17,7 +17,7 @@
 
     {{-- USER INFO --}}
     <li class="nav-item d-flex align-items-center" style="gap: 8px; margin-right: 8px;">
-        <img src="{{ asset('images/faces/face28.jpg') }}"
+        <img src="{{ asset('images/faces/face29.png') }}"
              alt="profile"
              style="width: 32px; height: 32px; border-radius: 50%; object-fit: cover;">
         <div style="line-height: 1.2;">
