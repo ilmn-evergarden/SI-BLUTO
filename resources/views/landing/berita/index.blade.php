@@ -66,6 +66,11 @@
 
             /* opsional tapi penting */
             position: relative;
+            
+            padding: 100px 24px;
+            text-align: center;
+            color: white;
+            overflow: hidden;
         }
 
         .hero-news::before {
@@ -78,6 +83,7 @@
         }
 
         .hero-orb {
+            display: none;
             position: absolute;
             border-radius: 50%;
             filter: blur(80px);

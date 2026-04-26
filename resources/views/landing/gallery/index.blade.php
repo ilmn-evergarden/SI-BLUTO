@@ -86,6 +86,7 @@
         }
 
         .hero-orb {
+            display: none;
             position: absolute;
             border-radius: 50%;
             filter: blur(88px);

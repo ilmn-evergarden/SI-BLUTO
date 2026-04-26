@@ -6,33 +6,27 @@
     <title>Login Si Bluto</title>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        *, *::before, *::after {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
         :root {
-            --blue-dark:   #0f3460;
-            --blue-mid:    #1a5fa8;
-            --blue-light:  #2e86de;
-            --blue-pale:   #dbeafe;
-            --blue-ghost:  #eff6ff;
-            --white:       #ffffff;
-            --text:        #1e2d3d;
-            --muted:       #6b7e93;
-            --border:      #d1dfe9;
+            --blue-dark:  #0f3460;
+            --blue-mid:   #1a5fa8;
+            --blue-light: #2e86de;
+            --white:      #ffffff;
+            --text:       #1e2d3d;
+            --muted:      #6b7e93;
+            --border:     #d1dfe9;
         }
 
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
-            background: var(--blue-ghost);
+            background: #eff6ff;
             min-height: 100vh;
             display: flex;
             align-items: stretch;
         }
 
-        /* ── Left panel ── */
+        /* Left panel */
         .left-panel {
             flex: 1;
             background: linear-gradient(155deg, var(--blue-dark) 0%, var(--blue-mid) 55%, var(--blue-light) 100%);
@@ -44,31 +38,25 @@
             position: relative;
             overflow: hidden;
         }
-
         .left-panel::before {
             content: '';
             position: absolute;
-            width: 420px;
-            height: 420px;
+            width: 420px; height: 420px;
             border-radius: 50%;
             border: 60px solid rgba(255,255,255,0.05);
-            top: -120px;
-            right: -120px;
+            top: -120px; right: -120px;
         }
         .left-panel::after {
             content: '';
             position: absolute;
-            width: 280px;
-            height: 280px;
+            width: 280px; height: 280px;
             border-radius: 50%;
             border: 50px solid rgba(255,255,255,0.05);
-            bottom: -80px;
-            left: -80px;
+            bottom: -80px; left: -80px;
         }
 
         .panel-logo {
-            width: 88px;
-            height: 88px;
+            width: 88px; height: 88px;
             background: rgba(255,255,255,0.12);
             border: 2px solid rgba(255,255,255,0.25);
             border-radius: 24px;
@@ -78,12 +66,7 @@
             margin-bottom: 28px;
             backdrop-filter: blur(4px);
         }
-
-        .panel-logo svg {
-            width: 48px;
-            height: 48px;
-            fill: white;
-        }
+        .panel-logo svg { width: 48px; height: 48px; fill: white; }
 
         .panel-title {
             font-size: 30px;
@@ -94,7 +77,6 @@
             line-height: 1.2;
             margin-bottom: 12px;
         }
-
         .panel-sub {
             font-size: 14px;
             color: rgba(255,255,255,0.65);
@@ -111,7 +93,6 @@
             width: 100%;
             max-width: 300px;
         }
-
         .badge {
             background: rgba(255,255,255,0.1);
             border: 1px solid rgba(255,255,255,0.15);
@@ -124,10 +105,8 @@
             font-size: 13px;
             backdrop-filter: blur(4px);
         }
-
         .badge-icon {
-            width: 32px;
-            height: 32px;
+            width: 32px; height: 32px;
             background: rgba(255,255,255,0.15);
             border-radius: 8px;
             display: flex;
@@ -136,7 +115,7 @@
             flex-shrink: 0;
         }
 
-        /* ── Right panel ── */
+        /* Right panel */
         .right-panel {
             width: 480px;
             flex-shrink: 0;
@@ -147,13 +126,32 @@
             justify-content: center;
             padding: 60px 48px;
             box-shadow: -8px 0 40px rgba(15,52,96,0.08);
+            position: relative;
         }
 
-        .form-header {
-            width: 100%;
-            margin-bottom: 36px;
+        /* Tombol Kembali */
+        .btn-back {
+            position: absolute;
+            top: 24px;
+            left: 24px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            background: none;
+            border: 1.5px solid var(--border);
+            border-radius: 8px;
+            padding: 7px 14px;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--muted);
+            cursor: pointer;
+            transition: border-color 0.2s, color 0.2s;
+            text-decoration: none;
         }
+        .btn-back:hover { border-color: var(--blue-light); color: var(--blue-light); }
 
+        .form-header { width: 100%; margin-bottom: 36px; }
         .form-header .welcome {
             font-size: 13px;
             font-weight: 600;
@@ -162,7 +160,6 @@
             text-transform: uppercase;
             margin-bottom: 8px;
         }
-
         .form-header h2 {
             font-size: 28px;
             font-weight: 800;
@@ -170,12 +167,7 @@
             letter-spacing: -0.5px;
             line-height: 1.2;
         }
-
-        .form-header p {
-            margin-top: 8px;
-            font-size: 14px;
-            color: var(--muted);
-        }
+        .form-header p { margin-top: 8px; font-size: 14px; color: var(--muted); }
 
         /* Alert */
         .alert {
@@ -193,9 +185,7 @@
             gap: 10px;
         }
 
-        /* Form */
         .form-body { width: 100%; }
-
         .form-group { margin-bottom: 20px; }
 
         label {
@@ -209,7 +199,7 @@
 
         .input-wrap { position: relative; }
 
-        .input-wrap svg {
+        .input-wrap .icon-left {
             position: absolute;
             left: 14px;
             top: 50%;
@@ -218,6 +208,23 @@
             pointer-events: none;
             transition: color 0.2s;
         }
+
+        /* Tombol mata */
+        .icon-eye {
+            position: absolute;
+            right: 14px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--muted);
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            transition: color 0.2s;
+        }
+        .icon-eye:hover { color: var(--blue-light); }
 
         input {
             width: 100%;
@@ -231,17 +238,14 @@
             outline: none;
             transition: border-color 0.2s, box-shadow 0.2s;
         }
-
+        input.with-eye { padding-right: 42px; }
         input::placeholder { color: #b0bec8; }
-
         input:focus {
             border-color: var(--blue-light);
             box-shadow: 0 0 0 3.5px rgba(46,134,222,0.12);
         }
+        .input-wrap:focus-within .icon-left { color: var(--blue-light); }
 
-        .input-wrap:focus-within svg { color: var(--blue-light); }
-
-        /* Submit */
         .btn {
             width: 100%;
             padding: 13.5px;
@@ -261,29 +265,13 @@
             transition: transform 0.15s, box-shadow 0.2s;
             box-shadow: 0 4px 16px rgba(26,95,168,0.3);
         }
-
-        .btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 24px rgba(26,95,168,0.35);
-        }
-
+        .btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(26,95,168,0.35); }
         .btn:active { transform: translateY(0); }
 
-        hr.divider {
-            width: 100%;
-            border: none;
-            border-top: 1px solid var(--border);
-            margin: 28px 0 20px;
-        }
+        hr.divider { width: 100%; border: none; border-top: 1px solid var(--border); margin: 28px 0 20px; }
 
-        .copyright {
-            font-size: 12px;
-            color: #b0bec8;
-            text-align: center;
-            line-height: 1.6;
-        }
+        .copyright { font-size: 12px; color: #b0bec8; text-align: center; line-height: 1.6; }
 
-        /* Responsive */
         @media (max-width: 820px) {
             body { flex-direction: column; }
             .left-panel { padding: 40px 32px; flex: none; }
@@ -306,10 +294,8 @@
             <rect x="29" y="20" width="6" height="10" fill="rgba(255,255,255,0.6)"/>
         </svg>
     </div>
-
     <h1 class="panel-title">Sistem Informasi Desa Bluto</h1>
     <p class="panel-sub">Portal layanan administrasi digital Balai Desa yang terintegrasi dan terpercaya.</p>
-
     <div class="badge-list">
         <div class="badge">
             <div class="badge-icon">
@@ -341,6 +327,14 @@
 <!-- RIGHT PANEL -->
 <div class="right-panel">
 
+    {{-- Tombol Kembali --}}
+    <a href="{{ url()->previous() }}" class="btn-back">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+            <path d="M15 18l-6-6 6-6"/>
+        </svg>
+        Kembali
+    </a>
+
     <div class="form-header">
         <p class="welcome">Selamat Datang</p>
         <h2>Masuk ke Akun Anda</h2>
@@ -350,7 +344,9 @@
     @if($errors->any())
     <div class="alert">
         <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
+            <circle cx="12" cy="12" r="10"/>
+            <line x1="12" y1="8" x2="12" y2="12"/>
+            <line x1="12" y1="16" x2="12.01" y2="16"/>
         </svg>
         {{ $errors->first() }}
     </div>
@@ -362,7 +358,7 @@
         <div class="form-group">
             <label for="login">Username atau Email</label>
             <div class="input-wrap">
-                <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <svg class="icon-left" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                     <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/>
                 </svg>
                 <input
@@ -380,10 +376,11 @@
         <div class="form-group">
             <label for="password">Password</label>
             <div class="input-wrap">
-                <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <svg class="icon-left" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                     <rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/>
                 </svg>
                 <input
+                    class="with-eye"
                     type="password"
                     id="password"
                     name="password"
@@ -391,6 +388,12 @@
                     required
                     autocomplete="current-password"
                 >
+                <button type="button" class="icon-eye" id="togglePassword" aria-label="Tampilkan password">
+                    <svg id="eyeIcon" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                        <circle cx="12" cy="12" r="3"/>
+                    </svg>
+                </button>
             </div>
         </div>
 
@@ -411,5 +414,20 @@
 
 </div>
 
+<script>
+    const toggle = document.getElementById('togglePassword');
+    const pwInput = document.getElementById('password');
+    const eyeIcon = document.getElementById('eyeIcon');
+
+    const eyeOpen  = `<path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/>`;
+    const eyeClosed = `<path d="M17.94 17.94A10.07 10.07 0 0112 20c-7 0-11-8-11-8a18.45 18.45 0 015.06-5.94M9.9 4.24A9.12 9.12 0 0112 4c7 0 11 8 11 8a18.5 18.5 0 01-2.16 3.19m-6.72-1.07a3 3 0 11-4.24-4.24"/><line x1="1" y1="1" x2="23" y2="23"/>`;
+
+    toggle.addEventListener('click', () => {
+        const isPassword = pwInput.type === 'password';
+        pwInput.type = isPassword ? 'text' : 'password';
+        eyeIcon.innerHTML = isPassword ? eyeClosed : eyeOpen;
+        toggle.setAttribute('aria-label', isPassword ? 'Sembunyikan password' : 'Tampilkan password');
+    });
+</script>
 </body>
 </html>

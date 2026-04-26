@@ -199,6 +199,7 @@
             border-radius: 50%;
             filter: blur(90px);
             opacity: 0.3;
+             display: none;
         }
 
         .hero-orb-1 {
@@ -241,6 +242,7 @@
         }
 
         .hero::before {
+            display: none;
             content: '';
             position: absolute;
             inset: 0;
@@ -1363,7 +1365,7 @@
             <div class="hero-eyebrow">
                 Kecamatan Bluto, Kabupaten Sumenep, Madura
             </div>
-            <h1>Selamat Datang di<br><span>Desa Bluto</span></h1>
+            <h1>Selamat Datang di<br>Desa Bluto</h1>
             <p class="hero-desc">
                 Pusat Informasi dan Layanan Masyarakat yang Transparan, Cepat, dan Terpercaya.
             </p>
