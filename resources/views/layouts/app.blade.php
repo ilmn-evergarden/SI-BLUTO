@@ -31,7 +31,7 @@ h3 { margin: 0 0 8px; color: var(--dark); }
 
 /* ===== NAVBAR ===== */
 nav.site-nav {
-    background: linear-gradient(135deg, #1e3a8a, #1a56db);
+    background: linear-gradient(to right, #ffffff 0%, #1a56db 100%);
     padding: 0 5%;
     display: flex;
     justify-content: space-between;
@@ -55,7 +55,7 @@ nav.site-nav .nav-brand {
 }
 
 nav.site-nav .nav-brand img {
-    height: 44px;        /* tinggi tetap */
+    height: 70px;        /* tinggi tetap */
     width: auto;         /* lebar mengikuti */
     object-fit: contain; /* tidak kepotong */
     border-radius: 0;    /* logo biasanya tidak perlu rounded */
@@ -170,7 +170,7 @@ footer.site-footer strong { color: white; }
         top: 64px;
         left: 0;
         right: 0;
-        background: linear-gradient(135deg, #1e3a8a, #1a56db);
+        background: linear-gradient(to right, #ffffff 0%, #1a56db 100%);
         padding: 16px 20px 20px;
         box-shadow: 0 8px 24px rgba(0,0,0,0.2);
         border-top: 1px solid rgba(255,255,255,0.1);
@@ -179,6 +179,7 @@ footer.site-footer strong { color: white; }
     nav.site-nav .nav-links.open { display: flex; }
 
     nav.site-nav .nav-links a {
+         color: #1e293b;
         padding: 12px 16px;
         font-size: 0.95rem;
         border-radius: 10px;
@@ -189,6 +190,10 @@ footer.site-footer strong { color: white; }
         margin-top: 6px;
         text-align: center;
         padding: 12px;
+
+         border: 1.5px solid #1a56db; /* ← border utama */
+    background: white;     /* biar kontras sama gradient */
+    color: #1a56db;         
     }
 }
 
