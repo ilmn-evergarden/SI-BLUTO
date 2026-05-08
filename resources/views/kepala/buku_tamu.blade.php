@@ -12,7 +12,7 @@
                     <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-2">
                         <a href="{{ route('kepala.guest.export', request()->query()) }}"
                             class="btn rounded-pill px-4 py-2 fw-semibold" style="background-color:#10b981; color:#fff;">
-                            <i class="fa fa-file-excel-o" style="margin-right:4px;"></i> Export File
+                            Export File
                         </a>
                     </div>
                     <form method="GET" action="{{ route('kepala.bukutamu') }}" class="mb-4">
@@ -47,12 +47,12 @@
                             <div class="col-md-6 col-lg-3 d-flex align-items-end">
 
                                 <button class="btn text-white" style="background:#4f46e5; margin-right:10px;">
-                                    <i class="fa fa-search" style="margin-right:4px;"></i> Filter
+                                    <i class="fas fa-search me-1"></i> Filter
                                 </button>
 
                                 @if (request()->hasAny(['search', 'from', 'to', 'sort']))
                                     <a href="{{ route('kepala.bukutamu') }}" class="btn btn-outline-secondary">
-                                        <i class="fa fa-refresh" style="margin-right:4px;"></i> Reset
+                                        <i class="fas fa-times me-1"></i> Reset
                                     </a>
                                 @endif
 

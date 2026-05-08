@@ -18,12 +18,12 @@
                                         class="form-control" placeholder="Cari nama atau email..." style="flex:1;">
 
                                     <button class="btn btn-primary">
-                                        <i class="fa fa-search" style="margin-right:4px;"></i> Cari
+                                        <i class="fas fa-search me-1"></i> Cari
                                     </button>
 
                                     @if (request('search'))
                                         <a href="{{ route('aparat.index') }}" class="btn btn-outline-secondary">
-                                            <i class="fa fa-refresh" style="margin-right:4px;"></i> Reset
+                                            Reset
                                         </a>
                                     @endif
 
@@ -33,7 +33,7 @@
                     </form>
 
                     <button class="btn btn-primary mb-3" onclick="openAdd()">
-                        <i class="fa fa-user-plus" style="margin-right:4px;"></i> Tambah Aparat
+                        Tambah Aparat
                     </button>
 
                     <div class="table-responsive">
@@ -67,7 +67,7 @@
 '{{ $aparat->email }}'
 )">
 
-                                                <i class="fa fa-pencil"></i> Edit
+                                                Edit
 
                                             </button>
 
@@ -77,8 +77,8 @@
                                                 @csrf
                                                 @method('DELETE')
 
-                                                <button class="btn btn-danger btn-sm" onclick="return confirm('Yakin hapus aparat ini?')">
-                                                    <i class="fa fa-trash"></i> Hapus
+                                                <button class="btn btn-danger btn-sm">
+                                                    Hapus
                                                 </button>
 
                                             </form>
@@ -132,7 +132,7 @@
                             <input type="password" class="form-control" name="password" required>
                         </div>
 
-                        <button class="btn btn-primary"><i class="fa fa-save" style="margin-right:4px;"></i> Simpan</button>
+                        <button class="btn btn-primary">Simpan</button>
 
                     </form>
 
@@ -178,7 +178,7 @@
                             <input type="password" name="password" class="form-control">
                         </div>
 
-                        <button class="btn btn-primary"><i class="fa fa-check" style="margin-right:4px;"></i> Update</button>
+                        <button class="btn btn-primary">Update</button>
 
                     </form>
 

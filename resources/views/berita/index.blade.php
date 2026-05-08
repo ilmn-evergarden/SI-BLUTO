@@ -14,7 +14,7 @@
                     <h4 class="card-title">Manajemen Berita Desa</h4>
 
                     <a href="{{ route($prefix . '.berita.create') }}" class="btn btn-primary mb-3">
-                        <i class="fa fa-plus" style="margin-right:4px;"></i> Tambah Berita
+                        Tambah Berita
                     </a>
                     <form method="GET" action="{{ route($prefix . '.berita.index') }}" class="mb-4">
                         <div class="row g-3">
@@ -64,12 +64,12 @@
                             <div class="col-md-6 col-lg-3 d-flex align-items-end">
 
                                 <button type="submit" class="btn btn-primary flex-fill" style="margin-right:10px;">
-                                    <i class="fa fa-search" style="margin-right:4px;"></i> Filter
+                                    <i class="fas fa-search"></i> Filter
                                 </button>
 
                                 @if (request('search') || request('status') || request('sort') || request('filter'))
                                     <a href="{{ route($prefix . '.berita.index') }}" class="btn btn-outline-secondary">
-                                        <i class="fa fa-refresh" style="margin-right:4px;"></i> Reset
+                                        <i class="fas fa-times"></i> Reset
                                     </a>
                                 @endif
 
@@ -107,13 +107,13 @@
 
                                             <a href="{{ route($prefix . '.berita.show', $item->slug) }}"
                                                 class="btn btn-info btn-sm">
-                                                <i class="fa fa-eye"></i> Lihat
+                                                Lihat
                                             </a>
 
                                             @can('update', $item)
                                                 <a href="{{ route($prefix . '.berita.edit', $item->id) }}"
                                                     class="btn btn-warning btn-sm">
-                                                    <i class="fa fa-pencil"></i> Edit
+                                                    Edit
                                                 </a>
                                             @endcan
 
@@ -124,8 +124,8 @@
                                                     @csrf
                                                     @method('DELETE')
 
-                                                    <button class="btn btn-danger btn-sm" onclick="return confirm('Yakin hapus berita ini?')">
-                                                        <i class="fa fa-trash"></i> Hapus
+                                                    <button class="btn btn-danger btn-sm">
+                                                        Hapus
                                                     </button>
 
                                                 </form>
@@ -161,7 +161,7 @@
                                                 <form action="{{ route('aparat.berita.submitReview', $item->id) }}"
                                                     method="POST" class="mt-1">
                                                     @csrf
-                                                    <button class="btn btn-info btn-sm"><i class="fa fa-paper-plane" style="margin-right:3px;"></i> Kirim</button>
+                                                    <button class="btn btn-info btn-sm">Kirim</button>
                                                 </form>
                                             @endif
                                             {{-- KEPALA: APPROVE / REJECT --}}
@@ -169,18 +169,18 @@
                                                 <form action="{{ route('kepala.berita.approve', $item->id) }}"
                                                     method="POST" style="display:inline">
                                                     @csrf
-                                                    <button class="btn btn-success btn-sm mt-1"><i class="fa fa-check-circle" style="margin-right:3px;"></i> Approve</button>
+                                                    <button class="btn btn-success btn-sm mt-1">Approve</button>
                                                 </form>
 
                                                 <button class="btn btn-danger btn-sm mt-1" data-toggle="modal"
                                                     data-target="#rejectModal{{ $item->id }}">
-                                                    <i class="fa fa-times-circle" style="margin-right:3px;"></i> Reject
+                                                    Reject
                                                 </button>
                                             @endif
                                             @if ($item->review_note && Auth::id() == $item->author_id)
                                                 <button class="btn btn-info btn-sm" data-toggle="modal"
                                                     data-target="#noteModal{{ $item->id }}">
-                                                    <i class="fa fa-sticky-note" style="margin-right:3px;"></i> Lihat Catatan
+                                                    Lihat Catatan
                                                 </button>
                                             @endif
                                         </td>
@@ -199,7 +199,7 @@
                                                         <textarea name="review_note" class="form-control" required></textarea>
                                                     </div>
                                                     <div class="modal-footer">
-                                                        <button class="btn btn-danger"><i class="fa fa-paper-plane" style="margin-right:4px;"></i> Kirim</button>
+                                                        <button class="btn btn-danger">Kirim</button>
                                                     </div>
                                                 </div>
                                             </form>
