@@ -103,13 +103,13 @@
                 <p class="stat-value">{{ $kunjunganBulan }}</p>
             </div>
         </div>
-        <div class="col-6 col-md-3">
+        <div class="col-4 col-md-3">
             <div class="stat-card">
                 <p class="stat-label">Berita diterbitkan</p>
                 <p class="stat-value">{{ $totalBerita ?? 0 }}</p>
             </div>
         </div>
-        <div class="col-6 col-md-3">
+        <div class="col-4 col-md-3">
             <div class="stat-card">
                 <p class="stat-label">Galeri foto</p>
                 <p class="stat-value">{{ $totalGaleri ?? 0 }}</p>
