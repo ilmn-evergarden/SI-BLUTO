@@ -12,7 +12,7 @@
                     <div class="card-body">
                         <h4 class="card-title">Manajemen Galeri Desa</h4>
                         <a href="{{ route($prefix . '.gallery.create') }}" class="btn btn-primary mb-3">
-                            Tambah Galeri
+                            <i class="fa fa-plus" style="margin-right:4px;"></i> Tambah Galeri
                         </a>
 
                         <div class="table-responsive">
@@ -65,13 +65,13 @@
                                     <div class="col-md-6 col-lg-3 d-flex align-items-end">
 
                                         <button type="submit" class="btn btn-primary" style="flex:1; margin-right:10px;">
-                                            <i class="fas fa-search me-1"></i> Filter
+                                            <i class="fa fa-search" style="margin-right:4px;"></i> Filter
                                         </button>
 
                                         @if (request('search') || request('status') || request('sort') || request('ownership'))
                                             <a href="{{ route($prefix . '.gallery.index') }}"
                                                 class="btn btn-outline-secondary">
-                                                <i class="fas fa-times me-1"></i> Reset
+                                                <i class="fa fa-refresh" style="margin-right:4px;"></i> Reset
                                             </a>
                                         @endif
 
@@ -140,14 +140,14 @@
                                                 {{-- LIHAT --}}
                                                 <a href="{{ route($prefix . '.gallery.show', $item->id) }}"
                                                     class="btn btn-info btn-sm">
-                                                    Lihat
+                                                    <i class="fa fa-eye"></i> Lihat
                                                 </a>
 
                                                 {{-- EDIT --}}
                                                 @if ($isKepala || (isset($item->created_by) && Auth::id() == $item->created_by))
                                                     <a href="{{ route($prefix . '.gallery.edit', $item->id) }}"
                                                         class="btn btn-warning btn-sm">
-                                                        Edit
+                                                        <i class="fa fa-pencil"></i> Edit
                                                     </a>
                                                 @endif
 
@@ -161,7 +161,7 @@
 
                                                         <button class="btn btn-danger btn-sm"
                                                             onclick="return confirm('Yakin hapus {{ addslashes($item->title ?? 'galeri ini') }}?')">
-                                                            Hapus
+                                                            <i class="fa fa-trash"></i> Hapus
                                                         </button>
                                                     </form>
                                                 @endif
@@ -173,13 +173,13 @@
                                                         method="POST" style="display:inline">
                                                         @csrf
                                                         <button class="btn btn-success btn-sm">
-                                                            Publish
+                                                            <i class="fa fa-check-circle" style="margin-right:3px;"></i> Publish
                                                         </button>
                                                     </form>
 
                                                     <button class="btn btn-danger btn-sm" data-bs-toggle="modal"
                                                         data-bs-target="#rejectModal{{ $item->id }}">
-                                                        Reject
+                                                        <i class="fa fa-times-circle" style="margin-right:3px;"></i> Reject
                                                     </button>
                                                 @endif
 
@@ -194,7 +194,7 @@
                                                         method="POST" style="display:inline">
                                                         @csrf
                                                         <button class="btn btn-primary btn-sm">
-                                                            Kirim
+                                                            <i class="fa fa-paper-plane" style="margin-right:3px;"></i> Kirim
                                                         </button>
                                                     </form>
                                                 @endif
@@ -235,8 +235,8 @@
                                                 maxlength="500"></textarea>
                                         </div>
                                         <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
-                                            <button type="submit" class="btn btn-danger">Tolak</button>
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><i class="fa fa-arrow-left" style="margin-right:4px;"></i> Batal</button>
+                                            <button type="submit" class="btn btn-danger"><i class="fa fa-times-circle" style="margin-right:4px;"></i> Tolak</button>
                                         </div>
                                     </div>
                                 </form>

@@ -11,12 +11,12 @@
                     {{-- HEADER BUTTON --}}
                     <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-2">
                         <a href="{{ route('guest.create') }}" class="btn btn-primary mb-3">
-                            <i class="fas fa-plus me-1"></i> Tambah Tamu
+                            <i class="fa fa-user-plus" style="margin-right:4px;"></i> Tambah Tamu
                         </a>
 
                         <a href="{{ route('guest.export', request()->query()) }}"
                             class="btn rounded-pill px-4 py-2 fw-semibold" style="background-color:#10b981; color:#fff;">
-                            Export File
+                            <i class="fa fa-file-excel-o" style="margin-right:4px;"></i> Export File
                         </a>
                     </div>
 
@@ -53,12 +53,12 @@
                             <div class="col-md-6 col-lg-3 d-flex align-items-end">
 
                                 <button class="btn text-white" style="background:#4f46e5; margin-right:10px;">
-                                    <i class="fas fa-search me-1"></i> Filter
+                                    <i class="fa fa-search" style="margin-right:4px;"></i> Filter
                                 </button>
 
                                 @if (request()->hasAny(['search', 'from', 'to', 'sort']))
                                     <a href="{{ route('guest.index') }}" class="btn btn-outline-secondary">
-                                        <i class="fas fa-times me-1"></i> Reset
+                                        <i class="fa fa-refresh" style="margin-right:4px;"></i> Reset
                                     </a>
                                 @endif
 
@@ -145,7 +145,7 @@
                                         {{-- AKSI --}}
                                         <td>
                                             <a href="{{ route('guest.edit', $guest->id) }}" class="btn btn-warning btn-sm">
-                                                Edit
+                                                <i class="fa fa-pencil"></i> Edit
                                             </a>
                                         </td>
 
