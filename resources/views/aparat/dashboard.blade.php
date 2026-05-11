@@ -103,13 +103,13 @@
                 <p class="stat-value">{{ $thisMonth }}</p>
             </div>
         </div>
-        <div class="col-6 col-md-3">
+        <div class="col-6 col-md-3 mt-2 mt-md-0">
             <div class="stat-card">
                 <p class="stat-label">Berita saya</p>
                 <p class="stat-value">{{ $myBerita }}</p>
             </div>
         </div>
-        <div class="col-6 col-md-3">
+        <div class="col-6 col-md-3 mt-2 mt-md-0">
             <div class="stat-card">
                 <p class="stat-label">Galeri saya</p>
                 <p class="stat-value">{{ $myGaleri }}</p>
@@ -149,7 +149,7 @@
                 <a href="{{ route('guest.index') }}" class="menu-btn">Buka Modul</a>
             </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4 mt-2 mt-md-0">
             <div class="menu-card">
                 <div class="menu-icon" style="background:#fef9c3;">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#a16207"
@@ -164,7 +164,7 @@
                 <a href="{{ route('aparat.berita.index') }}" class="menu-btn">Buka Modul</a>
             </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4 mt-2 mt-md-0">
             <div class="menu-card">
                 <div class="menu-icon" style="background:#ede9fe;">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6d28d9"

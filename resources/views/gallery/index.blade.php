@@ -14,10 +14,7 @@
                         <a href="{{ route($prefix . '.gallery.create') }}" class="btn btn-primary mb-3">
                             Tambah Galeri
                         </a>
-
-                        <div class="table-responsive">
-                            {{-- FILTER FORM - SAMAKAN DENGAN BERITA --}}
-                            <form method="GET" action="{{ route($prefix . '.gallery.index') }}" class="mb-4">
+<form method="GET" action="{{ route($prefix . '.gallery.index') }}" class="mb-4">
                                 <div class="row g-3">
                                     {{-- SEARCH --}}
                                     <div class="col-md-6 col-lg-3">
@@ -64,7 +61,7 @@
 
                                     <div class="col-md-6 col-lg-3 d-flex align-items-end">
 
-                                        <button type="submit" class="btn btn-primary" style="flex:1; margin-right:10px;">
+                                        <button type="submit" class="btn btn-primary" style="flex:1; margin-right:10px; margin-top: 0.9rem;">
                                             <i class="fas fa-search me-1"></i> Filter
                                         </button>
 
@@ -78,6 +75,8 @@
                                     </div>
                                 </div>
                             </form>
+                        <div class="table-responsive">
+                            
                             <table class="table table-hover">
                                 <thead>
                                     <tr>

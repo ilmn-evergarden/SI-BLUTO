@@ -241,7 +241,7 @@
                     <hr class="my-4">
 
                     {{-- ACTION BUTTONS --}}
-                    <div class="d-flex align-items-center gap-2" style="gap:12px;">
+                    <div class="d-flex align-items-center gap-2" style="gap:12px;col-md-6 col-lg-2">
                         <button type="submit"
                                 class="btn btn-primary d-flex align-items-center gap-2"
                                 id="submitBtn">

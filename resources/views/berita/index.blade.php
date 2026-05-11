@@ -63,7 +63,7 @@
 
                             <div class="col-md-6 col-lg-3 d-flex align-items-end">
 
-                                <button type="submit" class="btn btn-primary flex-fill" style="margin-right:10px;">
+                                <button type="submit" class="btn btn-primary flex-fill" style="margin-right:10px; margin-top: 0.9rem;">
                                     <i class="fas fa-search"></i> Filter
                                 </button>
 

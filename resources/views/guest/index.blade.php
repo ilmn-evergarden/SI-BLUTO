@@ -52,7 +52,7 @@
 
                             <div class="col-md-6 col-lg-3 d-flex align-items-end">
 
-                                <button class="btn text-white" style="background:#4f46e5; margin-right:10px;">
+                                <button class="btn text-white" style="background:#4f46e5; margin-right:10px; margin-top: 0.9rem;">
                                     <i class="fas fa-search me-1"></i> Filter
                                 </button>
 
