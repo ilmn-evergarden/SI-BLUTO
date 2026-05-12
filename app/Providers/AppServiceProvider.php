@@ -26,7 +26,6 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         Paginator::useBootstrapFive(); // atau useBootstrapFour()
-        Schema::blueprintResolver(191);
 
     }
 
