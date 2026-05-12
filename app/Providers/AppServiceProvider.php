@@ -8,7 +8,7 @@ use App\Policies\GalleryPolicy;
 use App\Policies\NewsPolicy;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Pagination\Paginator;
-use Illuminate\Support\Facades\Schema;
+
 
 class AppServiceProvider extends ServiceProvider
 {

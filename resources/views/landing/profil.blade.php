@@ -71,8 +71,8 @@
         }
 
         /* ================================================================
-       HERO
-    ================================================================ */
+           HERO
+        ================================================================ */
         .hero-profil {
             position: relative;
             background-image: url('/images/balai/desa.jpg');
@@ -163,8 +163,8 @@
         }
 
         /* ================================================================
-       SHARED SECTION
-    ================================================================ */
+           SHARED SECTION
+        ================================================================ */
         .section-wrap {
             padding: 72px 24px;
         }
@@ -220,8 +220,8 @@
         }
 
         /* ================================================================
-       TENTANG DESA
-    ================================================================ */
+           TENTANG DESA
+        ================================================================ */
         .tentang-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -322,8 +322,8 @@
         }
 
         /* ================================================================
-       SEJARAH
-    ================================================================ */
+           SEJARAH
+        ================================================================ */
         .sejarah-card {
             background: white;
             border: 1px solid var(--gray-border);
@@ -399,8 +399,8 @@
         }
 
         /* ================================================================
-       VISI MISI
-    ================================================================ */
+           VISI MISI
+        ================================================================ */
         .visimisi-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -516,8 +516,8 @@
         }
 
         /* ================================================================
-       PETA
-    ================================================================ */
+           PETA
+        ================================================================ */
         .peta-card {
             background: white;
             border: 1px solid var(--gray-border);
@@ -610,8 +610,8 @@
         }
 
         /* ================================================================
-       STATISTIK
-    ================================================================ */
+           STATISTIK
+        ================================================================ */
         .stats-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -676,8 +676,8 @@
         }
 
         /* ================================================================
-       PERANGKAT DESA
-    ================================================================ */
+           PERANGKAT DESA
+        ================================================================ */
         .struktur-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -742,8 +742,8 @@
         }
 
         /* ================================================================
-       RESPONSIVE
-    ================================================================ */
+           RESPONSIVE
+        ================================================================ */
         @media (max-width: 860px) {
             .tentang-grid {
                 grid-template-columns: 1fr;
@@ -1013,29 +1013,36 @@
         <div class="section-inner">
             <div class="section-header">
                 <span class="section-label">Lokasi</span>
-                <h2 class="section-title">Peta Desa Bluto</h2>
+                <h2 class="section-title">Peta Balai Desa Bluto</h2>
             </div>
 
             <div class="peta-card">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15820.123456789!2d113.8!3d-7.05!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd6e5b3b3b3b3b3%3A0x1234567890abcdef!2sBluto%2C%20Sumenep%2C%20Jawa%20Timur!5e0!3m2!1sid!2sid!4v1234567890"
-                    width="100%" height="420" style="border:0; display:block;" allowfullscreen="" loading="lazy"
+                <iframe src="https://www.google.com/maps?q=Balai+Desa+Bluto+Sumenep&output=embed" width="100%"
+                    height="420" style="border:0; display:block;" allowfullscreen="" loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade">
                 </iframe>
+
                 <div class="peta-footer">
                     <div class="peta-info">
                         <div class="peta-pin">
-                            <svg viewBox="0 0 24 24">
-                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
-                                <circle cx="12" cy="10" r="3" />
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
                             </svg>
                         </div>
+
                         <div class="peta-address">
-                            <p>Balai Desa Bluto</p>
-                            <p>Kecamatan Bluto, Kabupaten Sumenep, Madura, Jawa Timur</p>
+                            <p><strong>Balai Desa Bluto</strong></p>
+                            <p>
+                                Desa Bluto, Kecamatan Bluto,<br>
+                                Kabupaten Sumenep, Madura,<br>
+                                Jawa Timur
+                            </p>
                         </div>
                     </div>
-                    <a class="btn-maps" href="https://maps.google.com/?q=Bluto,Sumenep" target="_blank">
+
+                    <a class="btn-maps" href="https://maps.app.goo.gl/HACvdXHdvyZRm2om9" target="_blank"
+                        rel="noopener noreferrer">
                         Buka di Google Maps &rarr;
                     </a>
                 </div>
